@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "IdleRefresh",
+  "description": "Redirect to home page after 5 min idle time",
+  "version": "1.0",
+
+  "permissions": [
+    "http://www.styletag.com/*"
+  ],
+  
+  "web_accessible_resources": ["jquery-2.0.3.min.map"],
+  
+  "content_scripts": [
+      {
+        "matches": ["http://www.styletag.com/*"],
+        "js": ["jquery-2.0.3.min.map", "refresh.js"]
+      }
+    ],
+	
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
